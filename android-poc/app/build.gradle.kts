@@ -1,8 +1,7 @@
-plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-}
+// Use legacy apply(...) to rely on buildscript classpath for plugin resolution
+apply(plugin = "com.android.application")
+apply(plugin = "org.jetbrains.kotlin.android")
+apply(plugin = "kotlin-kapt")
 
 android {
     namespace = "com.qiaotime.poc"

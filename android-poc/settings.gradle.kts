@@ -1,8 +1,29 @@
 pluginManagement {
 	repositories {
+		// Primary plugin repositories
 		gradlePluginPortal()
 		google()
 		mavenCentral()
+
+		// Additional mirrors (helpful in China to speed up/avoid connection issues)
+		maven { url = uri("https://maven.aliyun.com/repository/google") }
+		maven { url = uri("https://maven.aliyun.com/repository/central") }
+		maven { url = uri("https://mirrors.tencent.com/nexus/repository/maven-public/") }
+	}
+}
+
+// Enforce centralized repository configuration for project dependencies
+// Use centralized repositories for dependency resolution. Avoid using RepositoriesMode API
+// to keep compatibility with older Gradle distributions that may be used by Android Studio.
+dependencyResolutionManagement {
+	repositories {
+		google()
+		mavenCentral()
+
+		// Mirrors (helpful in China)
+		maven { url = uri("https://maven.aliyun.com/repository/google") }
+		maven { url = uri("https://maven.aliyun.com/repository/central") }
+		maven { url = uri("https://mirrors.tencent.com/nexus/repository/maven-public/") }
 	}
 }
 

@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# Gradle wrapper launcher script (unix)
+if [ -z "$JAVA_HOME" ]; then
+  JAVA_EXEC=java
+else
+  JAVA_EXEC="$JAVA_HOME/bin/java"
+fi
+DIRNAME="$(cd "$(dirname "$0")" && pwd)"
+CLASSPATH="$DIRNAME/gradle/wrapper/gradle-wrapper.jar"
+if [ ! -f "$CLASSPATH" ]; then
+  echo "ERROR: gradle-wrapper.jar not found in $DIRNAME/gradle/wrapper/."
+  echo "Please generate the wrapper jar by running 'gradle wrapper --gradle-version 8.4' or import the project in Android Studio which can generate it for you."
+  exit 1
+fi
+exec "$JAVA_EXEC" -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
