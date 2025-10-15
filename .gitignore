@@ -1,0 +1,9 @@
+# Ignore local environment helper
+env-local.ps1
+
+# Node modules (if any examples are run locally)
+examples/**/node_modules/
+
+# Build artifacts
+android/app/build/
+ios/build/

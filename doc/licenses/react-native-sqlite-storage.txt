@@ -1,0 +1,3 @@
+react-native-sqlite-storage — MIT
+
+请在发布前替换为所使用版本的完整 LICENSE 文本（从该库的根目录复制）。

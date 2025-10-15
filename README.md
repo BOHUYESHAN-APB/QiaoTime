@@ -93,6 +93,13 @@ npx react-native run-windows
 - CookLikeHOC仓库中的Markdown格式菜谱
 - 老乡鸡官方《菜品溯源报告》
 
+更多文档和规范请查看仓库中的 `doc/` 目录，包含：
+
+- `doc/APP_SPEC.md` — 应用规格与开发方案（功能清单、数据结构、UI 规范、APK 内置内容要求）
+- `doc/ABOUT_FOR_APP.md` — 应用“关于”页面文案（包含对原始内容来源、开源使用说明与联系方式的展示文本）
+- `doc/LICENSES.md` — 第三方与内容许可证清单（列出依赖与内容来源的许可证类型和来源仓库）
+- `doc/ISSUE_TEMPLATES.md` — 供团队直接复制粘贴到 GitHub 的 issue 模板（上游通知、许可证问题、bug 与功能请求）
+
 ## 数据库结构
 
 应用使用SQLite数据库，包含以下表：
@@ -139,10 +146,10 @@ const theme = {
 ## 致谢
 
 - 老乡鸡官方《菜品溯源报告》
-- CookLikeHOC项目 (https://github.com/Gar-b-age/CookLikeHOC)
+- CookLikeHOC 项目 ([https://github.com/Gar-b-age/CookLikeHOC](https://github.com/Gar-b-age/CookLikeHOC))
 
 ## 联系我们
 
 如有问题或建议，请通过以下方式联系：
 
-- GitHub Issues: https://github.com/your-username/QiaoTime/issues
+- GitHub Issues: [https://github.com/your-username/QiaoTime/issues](https://github.com/your-username/QiaoTime/issues)

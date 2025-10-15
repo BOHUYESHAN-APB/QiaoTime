@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.qiaotime.poc">
+
+    <application
+        android:allowBackup="true"
+        android:label="QiaoTimePOC"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+
+        <activity android:name="com.qiaotime.poc.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.qiaotime.poc.ImagePreviewActivity" />
+
+    </application>
+
+</manifest>
