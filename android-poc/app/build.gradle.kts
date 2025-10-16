@@ -1,15 +1,19 @@
-// Use legacy apply(...) to rely on buildscript classpath for plugin resolution
-apply(plugin = "com.android.application")
-apply(plugin = "org.jetbrains.kotlin.android")
-apply(plugin = "kotlin-kapt")
+plugins {
+    id("com.android.application") version "8.1.1"
+    kotlin("android") version "1.9.10"
+    kotlin("kapt") version "1.9.10"
+}
 
 android {
     namespace = "com.qiaotime.poc"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.qiaotime.poc"
-        minSdk = 24
+    // Set minSdk to 16 to support Android 4.1+ test devices (Android 16)
+    // Note: some modern libraries (e.g. Coil 2.x) require higher API levels, so
+    // we use Glide for image loading which maintains compatibility with older APIs.
+    minSdk = 16
         targetSdk = 34
         versionCode = 1
         versionName = "0.1"
@@ -25,6 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildToolsVersion = "36.0.0"
 
 }
 
@@ -34,12 +39,11 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.recyclerview:recyclerview:1.3.0")
 
-    // Markwon for Markdown rendering
-    implementation("io.noties.markwon:core:4.7.1")
-    implementation("io.noties.markwon:image-coil:4.7.1")
+    // Use CommonMark to render Markdown to HTML, then display via WebView (works across older APIs)
+    implementation("org.commonmark:commonmark:0.21.0")
+    implementation("org.commonmark:commonmark-ext-gfm-tables:0.21.0")
 
     // Coil for image loading (optional, Markwon image-coil brings coil as transitive dep)
-    implementation("io.coil-kt:coil:2.4.0")
 
     // PhotoView for image zooming
     implementation("com.github.chrisbanes:PhotoView:2.3.0")

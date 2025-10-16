@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-merged_res-34:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-mdpi_ic_launcher_round.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-anydpi-v21_ic_launcher.xml.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-anydpi-v21/ic_launcher.xml"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-ldpi_ic_launcher.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-merged_res-34:\\layout_activity_image_preview.xml.flat",
+        "source": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-main-36:\\layout\\activity_image_preview.xml"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-anydpi-v21_ic_launcher_round.xml.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-anydpi-v21/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-merged_res-34:\\layout_item_recipe.xml.flat",
+        "source": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-main-36:\\layout\\item_recipe.xml"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-ldpi_ic_launcher_round.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-ldpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.qiaotime.poc.app-merged_res-34:/drawable-hdpi_ic_launcher_round.png.flat",
+        "source": "com.qiaotime.poc.app-pngs-30:/drawable-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-merged_res-34:\\layout_activity_main_with_search.xml.flat",
+        "source": "C:\\Users\\BoHuYeShan\\.gradle\\daemon\\8.4\\com.qiaotime.poc.app-main-36:\\layout\\activity_main_with_search.xml"
+    }
+]

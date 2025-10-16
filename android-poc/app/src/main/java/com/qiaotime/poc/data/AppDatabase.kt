@@ -9,7 +9,7 @@ import com.qiaotime.poc.data.dao.RecipeDao
 import com.qiaotime.poc.data.models.Favorite
 import com.qiaotime.poc.data.models.Recipe
 
-@Database(entities = [Recipe::class, Favorite::class, com.qiaotime.poc.data.models.RecipeFts::class], version = 2)
+@Database(entities = [Recipe::class, Favorite::class, com.qiaotime.poc.data.models.RecipeFts::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun recipeDao(): RecipeDao
     abstract fun favoriteDao(): FavoriteDao

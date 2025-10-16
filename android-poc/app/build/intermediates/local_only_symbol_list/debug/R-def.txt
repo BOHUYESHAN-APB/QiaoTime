@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher
+drawable ic_launcher_round
+id favBtn
+id markdownText
+id photoView
+id recyclerView
+id root
+id searchBtn
+id searchInput
+id title
+layout activity_image_preview
+layout activity_main
+layout activity_main_with_search
+layout item_recipe

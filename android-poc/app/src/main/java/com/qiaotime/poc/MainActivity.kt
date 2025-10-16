@@ -6,8 +6,8 @@ import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.app.AppCompatActivity
-import io.noties.markwon.Markwon
-import io.noties.markwon.image.coil.CoilImagesPlugin
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main_with_search)
 
-        val markwon = Markwon.builder(this)
-            .usePlugin(CoilImagesPlugin.create(this))
-            .build()
+        // Markwon removed for compatibility; we'll render markdown to HTML using CommonMark
+        val parser = Parser.builder().build()
+        val renderer = HtmlRenderer.builder().build()
 
         val db = AppDatabase.getInstance(this)
 
@@ -94,48 +94,47 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showRecipeDialog(title: String, mdContent: String) {
+        // Use WebView to render HTML converted from Markdown.
         val dialog = androidx.appcompat.app.AlertDialog.Builder(this).create()
-        val tv = TextView(this)
-        tv.setPadding(20, 20, 20, 20)
-
-        val markwon = Markwon.builder(this)
-            .usePlugin(CoilImagesPlugin.create(this))
-            .build()
-
-        markwon.setMarkdown(tv, mdContent)
-
-        // set movement method to allow clickable spans
-        tv.movementMethod = android.text.method.LinkMovementMethod.getInstance()
-
-        // attach touch listener to detect image clicks
-        tv.setOnTouchListener { v, event ->
-            if (event.action == android.view.MotionEvent.ACTION_UP) {
-                val x = event.x.toInt() - v.paddingLeft
-                val y = event.y.toInt() - v.paddingTop
-                val layout = (v as TextView).layout ?: return@setOnTouchListener false
-                val line = layout.getLineForVertical(y)
-                val off = layout.getOffsetForHorizontal(line, x.toFloat())
-                val sp = v.text as? android.text.Spanned ?: return@setOnTouchListener false
-                val imgs = sp.getSpans(off, off, android.text.style.ImageSpan::class.java)
-                if (imgs != null && imgs.isNotEmpty()) {
-                    val img = imgs[0]
-                    val src = img.source // Markwon sets source to the image path
-                    if (!src.isNullOrEmpty()) {
-                        val intent = android.content.Intent(this, ImagePreviewActivity::class.java)
-                        // If src is an asset path like recipes/... ensure asset URI
-                        val assetPath = if (src.startsWith("/")) src.removePrefix("/") else src
-                        intent.putExtra("path", assetPath)
-                        startActivity(intent)
-                        dialog.dismiss()
-                        return@setOnTouchListener true
-                    }
-                }
+        val web = android.webkit.WebView(this)
+        web.settings.javaScriptEnabled = true
+        // Expose a JS bridge that will notify Android when an image is clicked
+        web.addJavascriptInterface(object {
+            @android.webkit.JavascriptInterface
+            fun openImage(path: String) {
+                val intent = android.content.Intent(this@MainActivity, ImagePreviewActivity::class.java)
+                intent.putExtra("path", path)
+                startActivity(intent)
+                dialog.dismiss()
             }
-            false
-        }
+        }, "AndroidBridge")
+
+        // Convert markdown to HTML and add JS handler for images
+        val node = parser.parse(mdContent)
+        val html = renderer.render(node)
+        // Inject simple JS to intercept image clicks and call Android bridge
+        val htmlWithJs = """
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <style>img{max-width:100%;height:auto}</style>
+            <script>
+              function wrapImages(){
+                document.querySelectorAll('img').forEach(function(img){
+                  img.onclick = function(){ AndroidBridge.openImage(img.getAttribute('src')) }
+                })
+              }
+              window.onload = wrapImages
+            </script>
+            </head>
+            <body>$html</body>
+            </html>
+        """.trimIndent()
+
+        web.loadDataWithBaseURL("file:///android_asset/", htmlWithJs, "text/html", "utf-8", null)
 
         dialog.setTitle(title)
-        dialog.setView(tv)
+        dialog.setView(web)
         dialog.show()
     }
 }

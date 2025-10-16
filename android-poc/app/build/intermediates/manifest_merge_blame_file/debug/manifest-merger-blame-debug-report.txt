@@ -1,0 +1,92 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.qiaotime.poc"
+4    android:versionCode="1"
+5    android:versionName="0.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="34" />
+10
+11    <permission
+11-->[androidx.core:core:1.10.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\af3188c1e554012c0754042601660162\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+12        android:name="com.qiaotime.poc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.10.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\af3188c1e554012c0754042601660162\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.10.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\af3188c1e554012c0754042601660162\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.qiaotime.poc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.10.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\af3188c1e554012c0754042601660162\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.10.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\af3188c1e554012c0754042601660162\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:4:5-19:19
+18        android:allowBackup="true"
+18-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:5:5-31
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.10.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\af3188c1e554012c0754042601660162\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="true"
+22        android:icon="@drawable/ic_launcher"
+22-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:7:5-41
+23        android:label="QiaoTimePOC"
+23-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:6:5-32
+24        android:roundIcon="@drawable/ic_launcher_round"
+24-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:8:5-52
+25        android:supportsRtl="true"
+25-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:9:5-31
+26        android:testOnly="true" >
+27        <activity
+27-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:11:5-16:20
+28            android:name="com.qiaotime.poc.MainActivity"
+28-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:11:15-59
+29            android:exported="true" >
+29-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:11:60-83
+30            <intent-filter>
+30-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:12:13-15:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:13:17-69
+31-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:13:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:14:17-77
+33-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:14:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity android:name="com.qiaotime.poc.ImagePreviewActivity" />
+36-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:17:9-74
+36-->E:\CODE\QiaoTime\android-poc\app\src\main\AndroidManifest.xml:17:19-71
+37
+38        <service
+38-->[androidx.room:room-runtime:2.6.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\c9ac1ce0142bfa55c042a4802cead18f\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+39            android:name="androidx.room.MultiInstanceInvalidationService"
+39-->[androidx.room:room-runtime:2.6.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\c9ac1ce0142bfa55c042a4802cead18f\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+40            android:directBootAware="true"
+40-->[androidx.room:room-runtime:2.6.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\c9ac1ce0142bfa55c042a4802cead18f\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+41            android:exported="false" />
+41-->[androidx.room:room-runtime:2.6.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\c9ac1ce0142bfa55c042a4802cead18f\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+42
+43        <provider
+43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+44            android:name="androidx.startup.InitializationProvider"
+44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+45            android:authorities="com.qiaotime.poc.androidx-startup"
+45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+46            android:exported="false" >
+46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+47            <meta-data
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+48                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+49                android:value="androidx.startup" />
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\ac059dcfb04fd3c299b572472b7dfafa\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+50            <meta-data
+50-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\7369db7b65ef8b9d60b259d20de3f878\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+51                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+51-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\7369db7b65ef8b9d60b259d20de3f878\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+52                android:value="androidx.startup" />
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\BoHuYeShan\.gradle\caches\transforms-3\7369db7b65ef8b9d60b259d20de3f878\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+53        </provider>
+54    </application>
+55
+56</manifest>

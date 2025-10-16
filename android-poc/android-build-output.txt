@@ -1,0 +1,2 @@
+ERROR: gradle-wrapper.jar not found in E:\CODE\QiaoTime\android-poc\gradle\wrapper\.
+Please generate the wrapper jar by running "gradle wrapper --gradle-version 8.4" or import the project in Android Studio which can generate it for you.

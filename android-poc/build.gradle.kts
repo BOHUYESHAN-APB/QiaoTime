@@ -1,20 +1,17 @@
-// Minimal root build.gradle.kts using buildscript classpath to ensure AGP and Kotlin plugin are available.
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:8.1.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10")
-    }
-}
-
-// Repository settings for all projects
+// Root project build file: avoid adding plugin classpath here to prevent conflicts with plugins DSL
+// Repositories for all projects (include mirrors to help dependency resolution)
 allprojects {
     repositories {
         google()
         mavenCentral()
+
+        // Mirrors helpful in restricted networks
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
+        maven { url = uri("https://mirrors.tencent.com/nexus/repository/maven-public/") }
+
+        // Fallback repos
+        maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://s01.oss.sonatype.org/content/repositories/releases/") }
     }
 }
